@@ -170,18 +170,23 @@ h2 {
   align-items: center;
   gap: 64px;
   padding: 64px 80px;
+  flex-wrap: wrap; /* Permite que os itens se ajustem quando a tela for pequena */
 }
+
 #clinica li {
   margin-bottom: 16px;
   margin-left: 50px;
 }
+
 #farmacia {
   padding: 64px 80px;
   text-align: center;
 }
+
 #farmacia img {
   margin: 64px auto;
 }
+
 #farmacia .paragrafo {
   max-width: 950px;
   margin: 0 auto;
@@ -192,21 +197,28 @@ h2 {
   align-items: center;
   gap: 65px;
   padding: 64px 80px;
+  flex-wrap: wrap; /* Permite que os itens se ajustem quando a tela for pequena */
 }
+
 .duvida {
   position: relative;
+  width: 100%;
 }
+
 .duvida h3 {
   border: 2px solid #ff725e;
   border-radius: 8px;
   cursor: pointer;
   padding: 25px;
+  width: 100%;
 }
+
 .duvida img {
   position: absolute;
   top: 32px;
   right: 24px;
 }
+
 .duvida .p1 {
   border-right: 1px solid #ff725e;
   border-bottom: 1px solid #ff725e;
@@ -218,12 +230,92 @@ h2 {
   overflow: hidden;
   opacity: 0;
 }
+
 .duvida.ativa .p1 {
   height: fit-content;
   opacity: 1;
   padding: 25px;
   transition: all 0.3s ease;
 }
+
+/* Media Queries para Responsividade */
+
+/* Para telas de até 1024px */
+@media (max-width: 1024px) {
+  #clinica {
+    padding: 40px 40px; /* Reduz o padding para telas menores */
+    gap: 40px; /* Menor espaçamento entre os itens */
+  }
+
+  #farmacia {
+    padding: 40px 40px; /* Reduz o padding */
+  }
+
+  #duvidas {
+    padding: 40px 40px; /* Reduz o padding */
+    gap: 40px; /* Ajusta o espaçamento entre os itens */
+  }
+
+  .duvida h3 {
+    width: 100%; /* Faz com que o título ocupe 100% da largura */
+    padding: 16px; /* Ajusta o padding para uma melhor visualização */
+  }
+
+  .duvida .p1 {
+    padding: 16px 25px; /* Ajusta o padding interno para telas menores */
+  }
+}
+
+/* Para telas de até 768px */
+@media (max-width: 768px) {
+  #clinica {
+    padding: 32px 20px; /* Menor padding */
+    gap: 20px; /* Reduz o espaçamento entre os itens */
+  }
+
+  #farmacia {
+    padding: 32px 20px; /* Ajusta o padding */
+  }
+
+  #duvidas {
+    padding: 32px 20px; /* Ajusta o padding */
+    gap: 20px; /* Menor espaçamento entre os itens */
+  }
+
+  .duvida h3 {
+    padding: 12px; /* Reduz o padding para o título */
+  }
+
+  .duvida .p1 {
+    padding: 12px 25px; /* Ajusta o padding do conteúdo */
+  }
+}
+
+/* Para telas de até 480px */
+@media (max-width: 480px) {
+  #clinica {
+    padding: 20px 10px; /* Reduz o padding ainda mais */
+    gap: 10px; /* Menor espaçamento entre os itens */
+  }
+
+  #farmacia {
+    padding: 20px 10px; /* Ajusta o padding */
+  }
+
+  #duvidas {
+    padding: 20px 10px; /* Ajusta o padding */
+    gap: 10px; /* Menor espaçamento entre os itens */
+  }
+
+  .duvida h3 {
+    padding: 10px; /* Reduz o padding para o título */
+  }
+
+  .duvida .p1 {
+    padding: 10px 25px; /* Ajusta o padding do conteúdo */
+  }
+}
+
 footer {
   background-color: rgba(255, 152, 100, 0.25);
   display: flex;
