@@ -118,7 +118,8 @@ h2 {
     height: auto; /* Mantém a proporção da imagem */
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     font-size: 28px; /* Ajusta o tamanho da fonte */
   }
 }
@@ -136,7 +137,8 @@ h2 {
     margin: 0 auto; /* Centraliza a imagem */
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     font-size: 24px; /* Ajusta o tamanho da fonte */
   }
 
@@ -156,7 +158,8 @@ h2 {
     width: 90%; /* A imagem ocupa 90% da largura */
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     font-size: 20px; /* Reduz o tamanho da fonte */
   }
 
@@ -170,7 +173,7 @@ h2 {
   align-items: center;
   gap: 64px;
   padding: 64px 80px;
-  flex-wrap: wrap; /* Permite que os itens se ajustem quando a tela for pequena */
+  flex-wrap: wrap;
 }
 
 #clinica li {
@@ -185,6 +188,8 @@ h2 {
 
 #farmacia img {
   margin: 64px auto;
+  max-width: 100%;
+  height: auto;
 }
 
 #farmacia .paragrafo {
@@ -197,7 +202,7 @@ h2 {
   align-items: center;
   gap: 65px;
   padding: 64px 80px;
-  flex-wrap: wrap; /* Permite que os itens se ajustem quando a tela for pequena */
+  flex-wrap: wrap;
 }
 
 .duvida {
@@ -217,6 +222,8 @@ h2 {
   position: absolute;
   top: 32px;
   right: 24px;
+  max-width: 100%;
+  height: auto;
 }
 
 .duvida .p1 {
@@ -238,81 +245,94 @@ h2 {
   transition: all 0.3s ease;
 }
 
-/* Media Queries para Responsividade */
-
-/* Para telas de até 1024px */
 @media (max-width: 1024px) {
   #clinica {
-    padding: 40px 40px; /* Reduz o padding para telas menores */
-    gap: 40px; /* Menor espaçamento entre os itens */
+    padding: 40px 40px;
+    gap: 40px;
   }
 
   #farmacia {
-    padding: 40px 40px; /* Reduz o padding */
+    padding: 40px 40px;
   }
 
   #duvidas {
-    padding: 40px 40px; /* Reduz o padding */
-    gap: 40px; /* Ajusta o espaçamento entre os itens */
+    padding: 40px 40px;
+    gap: 40px;
   }
 
   .duvida h3 {
-    width: 100%; /* Faz com que o título ocupe 100% da largura */
-    padding: 16px; /* Ajusta o padding para uma melhor visualização */
+    width: 100%;
+    padding: 16px;
   }
 
   .duvida .p1 {
-    padding: 16px 25px; /* Ajusta o padding interno para telas menores */
+    padding: 16px 25px;
+  }
+
+  #farmacia img,
+  .duvida img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
-/* Para telas de até 768px */
 @media (max-width: 768px) {
   #clinica {
-    padding: 32px 20px; /* Menor padding */
-    gap: 20px; /* Reduz o espaçamento entre os itens */
+    padding: 32px 20px;
+    gap: 20px;
   }
 
   #farmacia {
-    padding: 32px 20px; /* Ajusta o padding */
+    padding: 32px 20px;
   }
 
   #duvidas {
-    padding: 32px 20px; /* Ajusta o padding */
-    gap: 20px; /* Menor espaçamento entre os itens */
+    padding: 32px 20px;
+    gap: 20px;
   }
 
   .duvida h3 {
-    padding: 12px; /* Reduz o padding para o título */
+    padding: 12px;
   }
 
   .duvida .p1 {
-    padding: 12px 25px; /* Ajusta o padding do conteúdo */
+    padding: 12px 25px;
+  }
+
+  #farmacia img,
+  .duvida img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
-/* Para telas de até 480px */
 @media (max-width: 480px) {
   #clinica {
-    padding: 20px 10px; /* Reduz o padding ainda mais */
-    gap: 10px; /* Menor espaçamento entre os itens */
+    padding: 20px 10px;
+    gap: 10px;
   }
 
   #farmacia {
-    padding: 20px 10px; /* Ajusta o padding */
+    padding: 20px 10px;
   }
 
   #duvidas {
-    padding: 20px 10px; /* Ajusta o padding */
-    gap: 10px; /* Menor espaçamento entre os itens */
+    padding: 20px 10px;
+    gap: 10px;
   }
 
   .duvida h3 {
-    padding: 10px; /* Reduz o padding para o título */
+    padding: 10px;
   }
 
   .duvida .p1 {
-    padding: 10px 25px; /* Ajusta o padding do conteúdo */
+    padding: 10px 25px;
+  }
+
+  #farmacia img,
+  .duvida img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -367,26 +387,21 @@ footer nav a {
   text-decoration: none;
   padding: auto;
 }
-footer p{
+footer p {
   max-width: 350px;
 }
 
 footer p a {
   color: #262626;
   text-decoration: none;
-  
 }
 
-
-#copyright{
-background-color: #263138;
-color: white;
-padding: 24px;
-text-align: center;
-
+#copyright {
+  background-color: #263138;
+  color: white;
+  padding: 24px;
+  text-align: center;
 }
-#copyright a{
-color: #ff725e;
+#copyright a {
+  color: #ff725e;
 }
-
-
